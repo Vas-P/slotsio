@@ -1,0 +1,382 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Circular Pro, Helvetica, Arial, sans-serif;
+    background: #fff;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a.btn {
+    max-width: 342px;
+    width: 100%;
+    display: inline-block;
+}
+
+.button {
+    border-radius: 0px;
+    width: 100%;
+    height: 60px;
+    background: #19ac51;
+    border-radius: 999px;
+    font-size: 23px;
+    border: 0;
+    font-weight: bold;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    align-self: center
+}
+
+.hero {
+    height: 770px;
+    background: url('../img/hero_bg_desktop.jpg') no-repeat;
+    background-size: cover;
+    background-color: #ccc;
+    color: #fff;
+    background-position: center;
+    position: relative;
+}
+/*.hero::before {
+    display: block;
+    content: "";
+    background: url('slothand.svg') no-repeat;
+    position: absolute;
+    bottom: -11px;
+    right: -2px;
+    width: 17vw;
+    height: 17vw;
+}*/
+
+.hero h1, .hero h2, .hero h3 {
+    max-width: 450px;
+    text-align: center;
+    font-size: 5rem;
+    margin: 0px auto;
+    font-family: Anchor;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.hero h1 {
+    margin: 5px 0 20px;
+}
+
+.hero h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.hero h3 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Circular Pro, Helvetica, Arial, sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.hero .logo {
+    width: 170px;
+    height: 70px;
+    background: url('../img/white.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 38px;
+    left: 90px;
+}
+
+.hero__inner {
+    max-width: 1350px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 70px;
+    margin-top: 75px;
+}
+
+.hero__inner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero .left__container {
+    margin-right: 12%;
+}
+
+.hero__inner .game__logo {
+    width: 100%;
+    max-width: 425px;
+}
+
+.hero__inner .game__logo img {
+    width: 100%;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    max-width: 545px;
+    box-shadow: 0 0 15px black;
+    position: relative;
+}
+
+.video img {
+    width: 100%;
+}
+
+.video video {
+    width: 100%;
+}
+
+.videoOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.playIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: url('../img/play.png') no-repeat #fff;
+    background-position: center;
+    position: absolute;
+}
+
+.hero .button {
+    margin: 20px 0;
+}
+
+.steps {
+    flex-direction: row;
+    color: #fff;
+}
+
+.step {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 95px;
+    padding-right: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.step p {
+    font-size: 12px;
+}
+
+.step .heading {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.step::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 80px solid #0c5529;
+}
+
+.step--1 {
+    background: #0c5529;
+    z-index: 2;
+    padding-left: 15px;
+}
+
+.step--2 {
+    background: #12813c;
+    z-index: 1;
+}
+
+.step--3 {
+    background: #18ac51;
+    z-index: 0;
+}
+
+.step--1::after { 
+    display: block;
+    content: "";
+    border-left: 80px solid #0c5529
+}
+
+.step--2::after {
+    border-left: 80px solid #12813c;
+}
+
+.step--3::after {
+    display: none;
+}
+
+.stepIcon {
+    min-width: 35px;
+    min-height: 33px;
+    border-radius: 16.5px;
+    border: 3px solid #fff;
+    line-height: 29px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+@media (max-height: 800px) {
+    .hero {
+        height: 665px;
+    }
+    .hero__inner {
+        margin-top: 0;
+    }
+}
+
+@media (max-width : 1024px) {
+    .hero {
+        height: 1090px;
+        padding-bottom: 25px;
+        background-image: url('../img/hero_bg_tablet.jpg');
+    }
+    .hero .hero__inner {
+        align-items: center;
+        margin-top: 150px;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .hero .left__container {
+        margin-right: 0;
+        order: 1;
+        padding: 2%;
+    }
+    .hero__inner .game__logo {
+        max-width: 430px;
+    }
+
+    .hero .logo {
+        top: 40px;
+        left: 30px;
+        width: 120px;
+    }
+
+    .hero .video {
+        width: auto;
+    }
+}
+
+@media (max-width: 728px) {
+    .hero {
+        height: auto;
+        padding: 75px 0;
+        background-image: url('../img/hero_bg_desktop.jpg');
+    }
+    
+    .hero::before {
+        display: none;
+    }
+    .hero .hero__inner {
+        margin-top: 50px;
+    }
+
+    .hero .logo {
+        left: 25px;
+        width: 105px;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+    
+    .step {
+        width: 100%;
+        flex-direction: column;
+        height: 140px;
+        padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .step::after {
+        bottom: -110px;
+        left: 50%;
+        top: auto;
+        transform: translateX(-50%);
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 60px solid #0c5529;
+    }
+    
+    .step--1 {
+        padding-top: 25px;
+    }
+    .step--1::after { 
+        display: block;
+        content: "";
+        border-top-color: #0c5529
+    }
+    
+    .step--2, .step--3 {
+        height: 210px;
+        padding-top: 70px;
+    }
+
+    .step--2::after {
+        border-top-color: #12813c;
+    }
+
+    .step--3::after {
+        display: block;
+        content: "";
+        border-top-color: #18ac51;
+    }
+    
+    .step .stepIcon {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+        
+    .step .heading {
+        margin-bottom: 10px;
+    }
+    
+    .step p {
+        max-width: 280px;
+        font-size: 13px;
+    }
+}
